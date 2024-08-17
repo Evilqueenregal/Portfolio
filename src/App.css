@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-title {
+  font-family: "Cookie", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-nav button {
+  font-family: "Poppins";
+  font-size: large;
+  font-weight: bold;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.header-nav button:hover {
+  background-color: #e0e0e0;
+}
+
+.header-nav button.active {
+  background-color: blue;
+  color: white;
+}
+
+.banner {
+  position: relative;
+  background-image: url('./assets/images/artificial-intelligence.webp');
+  background-size: cover;
+  background-position: center;
+  height: 465px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  background: rgba(57, 63, 229, 63%); 
+  border-radius: 10px;
+}
+
+#about {
+  text-align: center;
+  padding: 25px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.apropos-description {
+  text-decoration: none;
+  text-align: justify; 
+  font-family: 'Poppins';
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;;
+  line-height: 1.6; 
+  margin: 20px 0;
+  color: #333;
+}
+
+.apropos-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid blue; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); 
+  text-align: center; 
+  background-color: white; 
+}
+
+.apropos-title {
+  font-size: 2rem;
+  font-weight: bold; 
+}
+
+.profile-image {
+  width: 150px; 
+  height: auto; 
+  border-radius: 50%; 
+  margin: 20px 0; 
+}
+
+.apropos-description {
+  font-size: 1.2rem;
+  margin: 20px 0; 
+}
+
+.cv-button {
+  display: inline-block; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue; 
+  color: white; 
+  text-decoration: none; 
+  font-size: 1rem;
+  transition: background-color 0.3s; 
+}
+
+.cv-button:hover {
+  background-color: darkblue; 
+}
+
+
