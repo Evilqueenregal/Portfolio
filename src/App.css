@@ -122,4 +122,125 @@
   background-color: darkblue; 
 }
 
+.scroll-to-top {
+  position: fixed; 
+  bottom: 80px; 
+  right: 30px; 
+  background-color: blue; 
+  color: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  font-size: 20px; 
+  cursor: pointer; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s; 
+}
+.scroll-to-top i {
+  font-size: 20px; 
+  color: white; 
+}
+
+
+
+.scroll-to-top:hover {
+  background-color: darkblue; 
+}
+
+#tech {
+  text-align: center;
+  padding: 25px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.tech-container {
+  padding: 20px;
+  font-family: 'Poppins';
+}
+
+.tech-intro {
+  text-align: left;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+
+.tech-icons-front {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-front img {
+  width: 12%;
+}
+
+.tech-icons-back {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-back img {
+  width: 15%;
+}
+
+.tech-icons-versioning {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-versioning img {
+  width: 20%;
+}
+
+.tech-icons-outils {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-outils img {
+  width: 20%;
+}
+
+.tech-icons-ide {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-ide img {
+  width: 30%;
+}
+
+.tech-icons-autres {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icons-autres img {
+  width: 15%;
+}
+
 

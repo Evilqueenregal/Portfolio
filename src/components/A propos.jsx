@@ -1,8 +1,24 @@
 import '../App.css'; 
 import profileImage from '../assets/images/profile.webp';
 import cvFile from '../assets/docs/cv ciblé.pdf';
+import { useState } from 'react';
 
 const APropos = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleScrollVisibility = () => {
+    if (window.scrollY > 300) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScrollVisibility);
     return (
       <div className="apropos-container">
         <img src={profileImage} alt="Mon Profil" className="profile-image" />
@@ -16,6 +32,11 @@ const APropos = () => {
         <a href={cvFile} download className="cv-button">
           Télécharger Mon CV
         </a>
+      {visible && (
+        <button className="scroll-to-top" onClick={handleScroll}>
+          <i className="fas fa-chevron-up"></i>
+        </button>
+      )}
       </div>
     );
   };
