@@ -84,7 +84,7 @@
   padding: 20px;
   border: 2px solid blue; 
   border-radius: 15px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); 
+  box-shadow: 1px 1px 25px 0 #b8b5ff; 
   text-align: center; 
   background-color: white; 
 }
@@ -162,6 +162,8 @@
 .tech-container {
   padding: 20px;
   font-family: 'Poppins';
+  box-shadow: 1px 1px 25px 0 #b8b5ff; 
+  border-radius: 25px;
 }
 
 .tech-intro {
@@ -243,4 +245,199 @@
   width: 15%;
 }
 
+#projects {
+  text-align: center;
+  padding: 25px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.projets-container {
+  text-align: left;
+  padding: 20px;
+}
+
+.projets-grid {
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 1px 1px 25px 0 #b8b5ff; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.projet {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; 
+  width: 100%;
+  height: 320px;
+  margin: 0 auto;
+}
+
+.projet-image {
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.projet:hover .overlay {
+  opacity: 1; 
+}
+
+.description {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.description h3 {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.description p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+.button {
+  background-color: black; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: darkgray; 
+}
+
+@media (max-width: 768px) {
+  .projets-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .projets-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+#contact{
+  text-align: center;
+  padding: 25px;
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+  box-shadow: 1px 1px 25px 0 #b8b5ff;
+  border-radius: 25px;
+  background-color: blue;
+  color: white;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
+
+.contact-info h2 {
+  color: aqua;
+  font-family: 'Cookie', cursive;
+  font-weight: bold;
+}
+
+.contact-detail {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: aqua;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background-color: #72bbf2;
+  border-radius: 15px;
+}
+
+.contact-form label {
+  color: black;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.send-button {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: darkgray;
+}
 
