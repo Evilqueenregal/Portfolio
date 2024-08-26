@@ -18,10 +18,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Traitement de l'envoi du formulaire
     console.log('Form data:', formData);
     alert('Message envoyé!');
-    // Vous pouvez également ajouter une logique pour envoyer les données à un backend.
+    // Je peux également ajouter une logique pour envoyer les données à un backend.
   };
 
   return (
