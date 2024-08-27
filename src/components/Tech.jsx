@@ -4,7 +4,7 @@ import DevToolsIcon from '../assets/icons/logo devtools.webp';
 import FigmaIcon from '../assets/icons/logo figma.webp';
 import GithubIcon from '../assets/icons/logo github.webp';
 import HtmlIcon from '../assets/icons/logo html.webp';
-import JsIcon from '../assets/icons/logo Js.webp';
+import JsIcon from '../assets/icons/logo JS.webp';
 import LighthouseIcon from '../assets/icons/logo lighthouse.webp';
 import NodejsIcon from '../assets/icons/logo nodejs.webp';
 import PostmanIcon from '../assets/icons/logo postman.webp';
@@ -82,7 +82,6 @@ const Tech = () => {
           </div>
           <div className="tech-icons-autres">
             <img src={ReactDevToolsIcon} alt="ReactDevTools" />
-            <img src={WaveIcon} alt="Wave" />
             <img src={LighthouseIcon} alt="Lighthouse" />
           </div>
         </div>
