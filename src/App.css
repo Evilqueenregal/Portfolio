@@ -441,3 +441,86 @@
   background-color: darkgray;
 }
 
+
+@media (max-width: 1024px) {
+  .header-nav button {
+    font-size: 1rem; 
+  }
+
+  .banner-text {
+    font-size: 2rem; 
+  }
+
+  #about {
+    font-size: 36px; 
+  }
+
+  .apropos-title {
+    font-size: 1.5rem; 
+  }
+
+  .apropos-description {
+    font-size: 1rem; 
+  }
+
+  
+  .projets-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .header-title {
+    font-size: 2rem; 
+  }
+
+  .banner-text {
+    font-size: 1.5rem; 
+  }
+
+  #about, #tech, #projects, #contact {
+    font-size: 36px; 
+  }
+
+  .apropos-title {
+    font-size: 1.5rem; 
+  }
+
+  .projets-grid {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+
+  .contact-container {
+    flex-direction: column; 
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    flex-direction: column; 
+  }
+
+  .header-nav button {
+    margin: 5px 0; 
+  }
+
+  .scroll-to-top {
+    bottom: 20px; 
+    right: 20px; 
+  }
+
+  .profil-image {
+    width: 120px; 
+    height: auto;
+  }
+
+  .cv-button, .button {
+    font-size: 0.9rem; 
+  }
+}
+
