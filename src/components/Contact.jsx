@@ -1,26 +1,45 @@
-import { useState } from "react";
+import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import emailjs from '@emailjs/browser';
 import '../App.css';
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    email: '',
-    message: '',
+    user_name: '',
+    user_email: '',
+    message: ''
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log('Form data:', formData);
-    alert('Message envoyé!');
-    // Je peux également ajouter une logique pour envoyer les données à un backend.
+
+    emailjs
+      .sendForm('service_blv468c', 'template_9e9c1pj', form.current, 'TTAkZzie67JHd7yj4')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          // Réinitialiser le formulaire après envoi
+          setFormData({
+            user_name: '',
+            user_email: '',
+            message: ''
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
   };
 
   return (
@@ -50,47 +69,37 @@ const Contact = () => {
       </div>
 
       <div className="contact-form">
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="form-group">
-            <label>Votre nom :</label>
-            <input
-              type="text"
-              name="nom"
-              value={formData.nom}
-              onChange={handleChange}
-              required
+            <label>Name</label>
+            <input 
+              type="text" 
+              name="user_name" 
+              value={formData.user_name}
+              onChange={handleChange} 
+              required 
             />
           </div>
           <div className="form-group">
-            <label>Votre prénom :</label>
-            <input
-              type="text"
-              name="prenom"
-              value={formData.prenom}
-              onChange={handleChange}
-              required
+            <label>Email</label>
+            <input 
+              type="email" 
+              name="user_email" 
+              value={formData.user_email}
+              onChange={handleChange} 
+              required 
             />
           </div>
           <div className="form-group">
-            <label>Votre email :</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label>Votre message :</label>
-            <textarea
-              name="message"
+            <label>Message</label>
+            <textarea 
+              name="message" 
               value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
+              onChange={handleChange} 
+              required 
+            />
           </div>
-          <button type="submit" className="send-button">Envoyer</button>
+          <input type="submit" value="Send" className="send-button" />
         </form>
       </div>
     </div>
