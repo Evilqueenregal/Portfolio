@@ -1,5 +1,5 @@
 import '../App.css'; 
-import CssIcon from '../assets/icons/logo Css.webp';
+import CssIcon from '../assets/icons/logo CSS.webp';
 import DevToolsIcon from '../assets/icons/logo devtools.webp';
 import FigmaIcon from '../assets/icons/logo figma.webp';
 import GithubIcon from '../assets/icons/logo github.webp';
