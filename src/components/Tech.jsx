@@ -69,7 +69,7 @@ const Tech = () => {
         </div>
 
         <div className="tech-category">
-          <h3 className="tech-title">Autres outis</h3>
+          <h3 className="tech-title">Autres outils</h3>
           <div className="tech-icons-autres">
             <img src={W3CIcon} alt="W3C" />
             <img src={WaveIcon} alt="Wave" />
